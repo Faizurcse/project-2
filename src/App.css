@@ -1,0 +1,76 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #db4771, #c5acdc, #1c7bce);
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  .input-container {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .input-container input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .input-container button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th,
+  .data-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    
+  }
+  
+  .data-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .Edit-input {
+    padding: 5px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  
+  .edit-button,
+  .save-button,
+  .delete-button {
+    padding: 6px 10px;
+    margin-right: 5px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .save-button {
+    background-color: #4caf50;
+  }
+  
