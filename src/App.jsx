@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import "./Crud.css";
+import { useState } from "react";
 
-import "./App.css";
-
-function App() {
+function CrudOperation() {
   const [inputData, setInputData] = useState("");
   const [data, setData] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
@@ -11,8 +11,8 @@ function App() {
     setInputData(e.target.value);
   }
 
-  const addData = () => {
-    if (inputData.trim() !== "") {
+  const addData = (e) => {
+    if ((e.key === "Enter" || e.type === "click") && inputData.trim() !== "") {
       setData([...data, inputData]);
       setInputData("");
     }
@@ -44,7 +44,12 @@ function App() {
   return (
     <div className="container">
       <div className="input-container">
-        <input type="text" value={inputData} onChange={handleInput} />
+        <input
+          type="text"
+          value={inputData}
+          onChange={handleInput}
+          onKeyPress={addData}
+        />
         <button className="add-button" onClick={addData}>
           Add
         </button>
@@ -104,4 +109,4 @@ function App() {
   );
 }
 
-export default App;
+export default CrudOperation;
